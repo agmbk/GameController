@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">GameController</string>
-    <string name="username">Username</string>
+    <string name="server_ip">Ip du server</string>
     <string name="nouvelle_partie">Nouvelle partie</string>
     <string name="recommencer">Recommencer</string>
+    <string name="gamecontroller">GameController</string>
+    <string name="connectBtn">CONNECTION</string>
+    <string name="ipErrorText">IP invalide</string>
 </resources>
