@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button startGameButton = findViewById(R.id.startGame);
         startGameButton.setOnClickListener(this::startGame);
 
-        ipText = findViewById(R.id.username);
+        ipText = findViewById(R.id.ipAddress);
     }
 
     @Override
@@ -44,9 +44,18 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(ip);
 
         GameMessageManager.setServerAddress(ip);
+        System.out.println(GameMessageManager.getServerAddress());
+
         GameMessageManager.connect();
+
         System.out.println(GameMessageManager.isConnected());
-        return;
+
+        Intent intent = new Intent(this, GameButtonControls.class);
+
+        findViewById(R.id.ipError).setVisibility(View.INVISIBLE);
+
+        startActivity(intent);
+
 
         /*if (ip.length() == 0) {
             findViewById(R.id.ipError).setVisibility(View.VISIBLE);
