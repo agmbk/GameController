@@ -23,6 +23,16 @@ public class MainActivity extends AppCompatActivity {
         startGameButton.setOnClickListener(this::startGame);
 
         ipText = findViewById(R.id.ipAddress);
+
+        /*
+        IA TAKE OVER THE WORLD
+         */
+        String ip = ipText.getText().toString();
+        GameMessageManager.setServerAddress(ip);
+        GameMessageManager.connect();
+        Intent intent = new Intent(this, KickThatDriverOut.class);
+        findViewById(R.id.ipError).setVisibility(View.INVISIBLE);
+        startActivity(intent);
     }
 
     @Override
