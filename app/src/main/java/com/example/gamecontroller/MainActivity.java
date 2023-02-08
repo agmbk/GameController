@@ -1,7 +1,5 @@
 package com.example.gamecontroller;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    private EditText ipText;
     private final String IP_KEY = "USERNAME_KEY";
+    private EditText ipText;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -41,30 +41,15 @@ public class MainActivity extends AppCompatActivity {
 
         String ip = ipText.getText().toString();
 
-        System.out.println(ip);
-
         GameMessageManager.setServerAddress(ip);
-        System.out.println(GameMessageManager.getServerAddress());
 
         GameMessageManager.connect();
 
-        System.out.println(GameMessageManager.isConnected());
-
-        Intent intent = new Intent(this, GameButtonControls.class);
+        Intent intent = new Intent(this, KickThatDriverOut.class);
 
         findViewById(R.id.ipError).setVisibility(View.INVISIBLE);
 
         startActivity(intent);
-
-
-        /*if (ip.length() == 0) {
-            findViewById(R.id.ipError).setVisibility(View.VISIBLE);
-        } else {
-            Intent intent = new Intent(this, JoystickView.class);
-            findViewById(R.id.ipError).setVisibility(View.INVISIBLE);
-            startActivity(intent);
-        }
-         */
     }
 
     public void exit(View view) {

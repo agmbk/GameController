@@ -49,7 +49,6 @@ public class ButtonControls extends AppCompatActivity {
     }
 
 
-
     public void exit(View view) {
         finish();
     }

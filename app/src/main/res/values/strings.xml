@@ -6,4 +6,5 @@
     <string name="gamecontroller">GameController</string>
     <string name="connectBtn">CONNECTION</string>
     <string name="ipErrorText">IP invalide</string>
+    <string name="the_button">X</string>
 </resources>

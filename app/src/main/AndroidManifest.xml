@@ -15,7 +15,13 @@
         android:theme="@style/Theme.GameController"
         tools:targetApi="31">
         <activity
-            android:name=".GameButtonControls"
+            android:name=".KickThatDriverOut"
+            android:exported="false" />
+        <activity
+            android:name=".AdvancedVehicle"
+            android:exported="false" />
+        <activity
+            android:name=".BasicVehicle"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
